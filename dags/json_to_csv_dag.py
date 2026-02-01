@@ -11,6 +11,6 @@ def csv():
     df.to_csv("/opt/airflow/data/result.csv", index=False, encoding="utf-8")
 
 
-with DAG(dag_id="json_csv", start_date=datetime(2024, 1, 1), schedule_interval=None, catchup=False) as dag:
+with DAG(dag_id="json_csv", start_date=datetime(2026, 1, 1)) as dag:
     transform = PythonOperator(task_id="csv", python_callable=csv)
     transform
